@@ -1,0 +1,63 @@
+.large-hero {
+  position: relative;
+  /* top: -16rem; */
+  &__image {
+    display: block;
+  }
+  &__text-content {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    padding-top: 50px;
+    text-align: center;
+
+    @mixin atSmall {
+      padding-top: 0;
+      transform: translateY(-50%);
+    }
+  }
+  &__title {
+    font-size: $xsSize;
+    font-weight: normal;
+    background-color: $black;
+    max-width: 16rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 0;
+    letter-spacing: 2px;
+    word-spacing: 4px;
+    color: white;
+    &::before {
+      content: "Un";
+      color: $niceYellow;
+    }
+
+    @mixin atMedium {
+      letter-spacing: 3px;
+      font-size: $mSize;
+      word-spacing: 10px;
+      max-width: 35rem;
+    }
+    @mixin atLarge {
+      max-width: 43rem;
+    }
+  }
+  &__little-title {
+    color: white;
+    background-color: rgba($mainGrey, 0.7);
+    max-width: 15.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 0.9rem;
+    padding: 10px;
+    &:hover {
+      transition: background 200ms ease-in-out;
+      background-color: rgba($mainGrey, 0.9);
+    }
+    @mixin atSmall {
+      max-width: 17.5rem;
+      font-size: 1.2rem;
+    }
+  }
+}

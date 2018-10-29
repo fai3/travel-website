@@ -1,0 +1,29 @@
+.social {
+  padding: 1rem 0;
+  &__icon {
+    &:hover {
+      color: white;
+    }
+    .fab {
+      margin-right: 10px;
+      font-size: 1.5rem;
+      /* display: inline-block; */
+      &:hover {
+        color: $socialColor;
+      }
+    }
+  }
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+  li {
+    list-style: none;
+    display: inline-block;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    @mixin atMedium {
+      padding-bottom: 1.2rem;
+    }
+  }
+}

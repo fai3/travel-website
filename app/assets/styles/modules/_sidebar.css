@@ -1,0 +1,73 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+  width: 100%;
+  color: white;
+  font-size: 1.1rem;
+  opacity: 0;
+  visibility: hidden;
+  &--open {
+    opacity: 1;
+    visibility: visible;
+    @mixin atMedium {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+  &__upper {
+    width: 100%;
+    background: $headerLowerBack;
+    padding: 1rem 1rem 0 1rem;
+  }
+  &__link {
+    display: inline-block;
+    width: 45%;
+    padding-right: 1.5rem;
+    padding-left: 10%;
+    padding-bottom: 0.7rem;
+    &--active {
+      border-bottom: 3px solid $niceYellow;
+    }
+  }
+
+  &__x {
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: padding 0.6s ease-in-out;
+    &:hover {
+      color: $niceYellow;
+      padding-left: 3px;
+    }
+  }
+  a {
+    color: white;
+  }
+  &__lower {
+    background-color: $blue;
+    height: 100%;
+    width: 90%;
+    text-align: center;
+    ul li {
+      position: relative;
+      padding: 1.2rem;
+      border-bottom: 1px solid #333;
+    }
+    .icon {
+      padding-right: 0.6rem;
+    }
+  }
+  &__down-arrow {
+    position: absolute;
+    display: inline-block;
+    font-size: 1.6rem;
+    right: 1.5rem;
+  }
+  &__logo {
+    width: 50%;
+    margin-left: -8rem;
+    /* padding-left: -20px; */
+  }
+}

@@ -1,0 +1,34 @@
+/* $mainBlue: #2f5572; */
+
+body {
+  font-family: "helvetica", sans-serif;
+  color: $mainGrey;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+.video {
+  width: 100%;
+  height: auto;
+}
+ul {
+  padding: 0;
+  margin: 0;
+}
+ul li {
+  list-style: none;
+}
+.active {
+  border-bottom: 3px solid $borderColor;
+}

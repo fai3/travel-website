@@ -1,0 +1,13 @@
+.offer {
+  background: #00a2b1;
+  text-align: center;
+  &__link {
+    display: inline-block;
+    border: 1px solid White;
+    padding: 0.4rem;
+    margin: 2.6rem 0;
+    @mixin atLarge {
+      margin: 4.74rem 0;
+    }
+  }
+}

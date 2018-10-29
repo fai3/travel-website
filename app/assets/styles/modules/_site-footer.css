@@ -1,0 +1,26 @@
+.site-footer {
+  color: white;
+  background-color: $footerBack;
+  font-family: Helvetica, sans-serif;
+  &__logo__pic {
+    width: 100px;
+    height: auto;
+    padding: 2rem 0;
+  }
+  a {
+    color: $socialColor;
+  }
+  &__copy {
+    color: $mainGrey;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 2rem 0;
+    @mixin atLarge {
+      text-align: right;
+    }
+  }
+  &__disclaimer {
+    font-size: 0.8rem;
+    text-align: justify;
+  }
+}

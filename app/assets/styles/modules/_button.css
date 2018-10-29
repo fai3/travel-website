@@ -1,0 +1,18 @@
+.button {
+  background: #ffffff;
+  color: $blue;
+  padding: 0.4rem 1.6rem;
+  display: inline-block;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  border: 1px solid $blue;
+  &--medium {
+    font-size: 1.7rem;
+  }
+  &--center {
+    text-align: center;
+  }
+  &:hover {
+    color: #ffffff;
+    background: $blue;
+  }
+}

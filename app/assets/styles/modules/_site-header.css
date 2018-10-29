@@ -1,0 +1,189 @@
+.site-header {
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+  @mixin clearfix;
+  &__text-right-at-large {
+    @mixin atLarge {
+      float: right;
+      line-height: 1.6;
+    }
+  }
+  &__upper {
+    @mixin clearfix;
+    background: $footerBack;
+    font-size: 0.8rem;
+    padding: 2rem 0 0.8rem 0;
+    text-align: left;
+    @mixin atMedium {
+      padding: 0.8rem 0 0 0;
+    }
+  }
+
+  &__hide-till-medium {
+    display: none;
+    @mixin atMedium {
+      display: block;
+      padding: 1.2rem 0 0 0;
+    }
+    @mixin atLarge {
+      padding: 0;
+    }
+    ul {
+      padding: 0;
+      margin: 0;
+    }
+    ul li a {
+      font-size: 0.8rem;
+      display: inline-block;
+      padding-bottom: 0.4rem;
+
+      @mixin atLarge {
+        font-size: 1rem;
+      }
+    }
+  }
+  &--active-till-change {
+    border-bottom: 3px solid $borderColor;
+  }
+  &__link {
+    color: $socialColor;
+    text-decoration: underline;
+  }
+  &__lower {
+    background: $headerLowerBack;
+    font-size: 0.8rem;
+    position: relative;
+
+    ul {
+      a {
+        &:hover {
+          padding-bottom: 0.6rem;
+          border-bottom: 6px solid $yellowBorder;
+        }
+      }
+      @mixin atMedium {
+        padding-top: -1rem;
+      }
+      @mixin atLarge {
+        padding: 0 0 0 1rem;
+        margin: 0 0 0 15.5rem;
+      }
+    }
+  }
+  &__lower--center {
+    @mixin atMedium {
+      transform: translateY(-20%);
+    }
+    @mixin atLarge {
+      transform: translateY(-13%);
+    }
+  }
+  &__logo {
+    display: inline-block;
+    overflow: hidden;
+    width: 60px;
+    height: 50px;
+    margin-left: 30px;
+    @mixin atMedium {
+      overflow: visible;
+      width: auto;
+      height: 70px;
+      margin-left: 1rem;
+    }
+    @mixin atLarge {
+      margin-top: -0.5rem;
+    }
+  }
+  &__logo__pic {
+    padding-top: 0.5rem;
+    margin-left: -63px;
+    width: 100px;
+    height: auto;
+    @mixin atMedium {
+      margin-left: 0;
+      width: 120px;
+      position: relative;
+      top: 10px;
+      padding-top: 1rem;
+    }
+    @mixin atLarge {
+      position: absolute;
+      top: 0;
+      padding-top: 1.5rem;
+    }
+  }
+  nav {
+    display: inline-block;
+    margin-left: 1.8rem;
+    transform: translateY(-30%);
+  }
+
+  ul li {
+    display: none;
+    @mixin atMedium {
+      display: inline-block;
+      font-size: 1rem;
+      padding-right: 0.7rem;
+    }
+    @mixin atLarge {
+      padding-right: 2.2rem;
+      font-size: 1.1rem;
+    }
+  }
+  &__right-nav {
+    float: right;
+    margin-top: -1.2rem;
+    ul li {
+      padding-right: 1rem;
+      @mixin atLarge {
+        padding-right: 1.7rem;
+        font-size: 1.5rem;
+      }
+    }
+  }
+  &__menu-icon {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    @mixin atMedium {
+      display: none;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: white;
+      width: 20px;
+      height: 3px;
+      transform-origin: 0 0%;
+      transition: all 0.4s ease-in-out;
+    }
+    &__middle {
+      position: absolute;
+      top: 8px;
+      left: 0;
+      background-color: white;
+      width: 20px;
+      height: 3px;
+      transition: all 0.4s ease-in-out;
+      transform-origin: 0 50%;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 16px;
+      left: 0;
+      background-color: white;
+      width: 20px;
+      height: 3px;
+      transition: all 0.4s ease-in-out;
+      transform-origin: 0 100%;
+    }
+  }
+}
+/* #FFC20E */

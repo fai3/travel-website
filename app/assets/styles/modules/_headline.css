@@ -1,0 +1,21 @@
+.headline {
+  color: #5c5c5c;
+  font-size: 1.5rem;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  &--medium {
+    font-size: 1.965rem;
+    font-weight: 300;
+    @mixin atMedium {
+      font-size: 2.7rem;
+    }
+  }
+  &--no-m-b {
+    margin-bottom: 0;
+  }
+  &--margin-bottom {
+    margin-bottom: 1.2rem;
+  }
+  &--margin-top {
+    margin-top: 2.2rem;
+  }
+}

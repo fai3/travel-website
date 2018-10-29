@@ -1,0 +1,9 @@
+.page-section {
+  padding: 1.2rem 0;
+  &--large {
+    padding: 3rem 0 1.5rem 0;
+    @mixin atLarge {
+      padding: 1rem 0;
+    }
+  }
+}
